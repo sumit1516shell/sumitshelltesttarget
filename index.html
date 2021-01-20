@@ -17,15 +17,27 @@
   <link rel="dns-prefetch" href="//techmarketingdemos.sc.omtrdc.net">
   <!--/Preconnect and DNS-Prefetch-->
   <!--Data Layer to enable rich data collection and targeting-->
-  <script>
-  var digitalData = {
-      "page": {
-          "pageInfo" : {
-              "pageName": "Home"
-              }
-          }
-  };
-  </script>
+window.digitalData = {
+    "page": {
+        "pageInfo" : {
+            "pageName": "Home"
+            }
+        },
+
+        "user": [
+            {
+              "profile": [
+                {
+                  "profileInfo": {},
+                  "attributes": {
+                    "loggedIn": true,
+                    "username": "112ca06ed53d3db37e4cea49cc45b71e"
+                  }
+                }
+              ]
+            }
+          ]
+};
   <!--/Data Layer-->
   <!--jQuery or other helper libraries-->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -39,7 +51,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
-    <title>shell - Bootstrap 4.0 Theme</title>
+    <title>shell - sumit Test&Target</title>
 <!--
 shell
 https://templatemo.com/tm-535-softy-pinko
