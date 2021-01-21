@@ -1,52 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-  <!--Preconnect and DNS-Prefetch to improve page load time. REPLACE "techmarketingdemos" WITH YOUR OWN AAM PARTNER ID, TARGET CLIENT CODE, AND ANALYTICS TRACKING SERVER-->
-  <link rel="preconnect" href="//dpm.demdex.net">
-  <link rel="preconnect" href="//fast.techmarketingdemos.demdex.net">
-  <link rel="preconnect" href="//techmarketingdemos.demdex.net">
-  <link rel="preconnect" href="//cm.everesttech.net">
-  <link rel="preconnect" href="//techmarketingdemos.tt.omtrdc.net">
-  <link rel="preconnect" href="//techmarketingdemos.sc.omtrdc.net">
-  <link rel="dns-prefetch" href="//dpm.demdex.net">
-  <link rel="dns-prefetch" href="//fast.techmarketingdemos.demdex.net">
-  <link rel="dns-prefetch" href="//techmarketingdemos.demdex.net">
-  <link rel="dns-prefetch" href="//cm.everesttech.net">
-  <link rel="dns-prefetch" href="//techmarketingdemos.tt.omtrdc.net">
-  <link rel="dns-prefetch" href="//techmarketingdemos.sc.omtrdc.net">
-  <!--/Preconnect and DNS-Prefetch-->
-  <!--Data Layer to enable rich data collection and targeting-->
-<script>
-window.digitalData = {
-    "page": {
-        "pageInfo" : {
-            "pageName": "Home page sumit"
-            }
-        },
-
-        "user": [
-            {
-              "profile": [
-                {
-                  "profileInfo": {},
-                  "attributes": {
-                    "loggedIn": true,
-                    "username": "112ca06ed53d3db37e4cea49cc45b71e"
-                  }
+<head>
+    <!--Preconnect and DNS-Prefetch to improve page load time. REPLACE "techmarketingdemos" WITH YOUR OWN AAM PARTNER ID, TARGET CLIENT CODE, AND ANALYTICS TRACKING SERVER-->
+    <link rel="preconnect" href="//dpm.demdex.net">
+    <link rel="preconnect" href="//fast.techmarketingdemos.demdex.net">
+    <link rel="preconnect" href="//techmarketingdemos.demdex.net">
+    <link rel="preconnect" href="//cm.everesttech.net">
+    <link rel="preconnect" href="//techmarketingdemos.tt.omtrdc.net">
+    <link rel="preconnect" href="//techmarketingdemos.sc.omtrdc.net">
+    <link rel="dns-prefetch" href="//dpm.demdex.net">
+    <link rel="dns-prefetch" href="//fast.techmarketingdemos.demdex.net">
+    <link rel="dns-prefetch" href="//techmarketingdemos.demdex.net">
+    <link rel="dns-prefetch" href="//cm.everesttech.net">
+    <link rel="dns-prefetch" href="//techmarketingdemos.tt.omtrdc.net">
+    <link rel="dns-prefetch" href="//techmarketingdemos.sc.omtrdc.net">
+    <!--/Preconnect and DNS-Prefetch-->
+    <!--Data Layer to enable rich data collection and targeting-->
+    <script>
+        window.digitalData = {
+            "page": {
+                "pageInfo": {
+                    "pageName": "Home page sumit"
                 }
-              ]
+            },
+
+            "user": [
+                {
+                    "profile": [
+                        {
+                            "profileInfo": {},
+                            "attributes": {
+                                "loggedIn": true,
+                                "username": "112ca06ed53d3db37e4cea49cc45b71e"
+                            }
+                        }
+                    ]
+                }
+            ]
+        };
+    </script>
+    <!--/Data Layer-->
+    <!--jQuery or other helper libraries-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!--/jQuery-->
+    <script>
+        ; (function (win, doc, style, timeout) {
+            var STYLE_ID = 'at-body-style';
+            function getParent() {
+                return doc.getElementsByTagName('head')[0];
             }
-          ]
-};
-</script>
-  <!--/Data Layer-->
-  <!--jQuery or other helper libraries-->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <!--/jQuery-->
-  <!--Launch Header Embed Code: REPLACE THE NEXT LINE WITH THE EMBED CODE FROM YOUR OWN DEVELOPMENT ENVIRONMENT-->
- <script src="//assets.adobedtm.com/f9893730911b/f6182a5b05db/launch-254ecbf429a2-development.min.js" async></script>
-  <!--/Launch Header Embed Code-->
+            function addStyle(parent, id, def) {
+                if (!parent) {
+                    return;
+                }
+                var style = doc.createElement('style');
+                style.id = id;
+                style.innerHTML = def;
+                parent.appendChild(style);
+            }
+            function removeStyle(parent, id) {
+                if (!parent) {
+                    return;
+                }
+                var style = doc.getElementById(id);
+                if (!style) {
+                    return;
+                }
+                parent.removeChild(style);
+            }
+            addStyle(getParent(), STYLE_ID, style);
+            setTimeout(function () {
+                removeStyle(getParent(), STYLE_ID);
+            }, timeout);
+        }(window, document, "body {opacity: 0 !important}", 3000));</script>
+    <!--Launch Header Embed Code: REPLACE THE NEXT LINE WITH THE EMBED CODE FROM YOUR OWN DEVELOPMENT ENVIRONMENT-->
+    <script src="//assets.adobedtm.com/f9893730911b/f6182a5b05db/launch-254ecbf429a2-development.min.js" async></script>
+    <!--/Launch Header Embed Code-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -54,7 +84,7 @@ window.digitalData = {
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
 
     <title>shell - sumit Test&Target</title>
-<!--
+    <!--
 shell
 https://templatemo.com/tm-535-softy-pinko
 -->
@@ -66,10 +96,10 @@ https://templatemo.com/tm-535-softy-pinko
 
     <link rel="stylesheet" href="assets/css/templatemo-softy-pinko.css">
 
-    </head>
-    
-    <body>
-    
+</head>
+
+<body>
+
     <!-- ***** Preloader Start ***** -->
     <div id="preloader">
         <div class="jumper">
@@ -77,10 +107,10 @@ https://templatemo.com/tm-535-softy-pinko
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>
     <!-- ***** Preloader End ***** -->
-    
-    
+
+
     <!-- ***** Header Area Start ***** -->
     <header class="header-area header-sticky">
         <div class="container">
@@ -89,16 +119,17 @@ https://templatemo.com/tm-535-softy-pinko
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="#" class="logo">
-                            <img src="https://www.goplus.shell.com/cdn/b/deriv/17/b1088a032c27fa47681c1dafe8982a/292x54.png?Header%20Icon.png" alt="shell"/>
+                            <img src="https://www.goplus.shell.com/cdn/b/deriv/17/b1088a032c27fa47681c1dafe8982a/292x54.png?Header%20Icon.png"
+                                alt="shell" />
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li><a href="#welcome" class="active">Home</a></li>
                             <li><a href="#features">About</a></li>
-                            <li><a href="#work-process">Work Process</a></li>
+                            <li><a href="#work-process">Reward Process</a></li>
                             <li><a href="#testimonials">Testimonials</a></li>
-                            <li><a href="#pricing-plans">Pricing Tables</a></li>
+                            <li><a href="#pricing-plans">Offers</a></li>
                             <li><a href="#blog">Blog Entries</a></li>
                             <li><a href="#contact-us">Contact Us</a></li>
                         </ul>
@@ -121,7 +152,8 @@ https://templatemo.com/tm-535-softy-pinko
             <div class="container">
                 <div class="row">
                     <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
-                        <h1>We provide the best <strong>rewards</strong><br>to grow up your <strong>fuel top ups</strong></h1>
+                        <h1>We provide the best <strong>rewards</strong><br>to grow up your <strong>fuel top
+                                ups</strong></h1>
                         <p>Shell Go+ is now live across the country.
                             Make the best of your journeys with Shell Go+.</p>
                         <a href="#features" class="main-button-slider">Discover More</a>
@@ -140,37 +172,40 @@ https://templatemo.com/tm-535-softy-pinko
                 <div class="col-lg-12">
                     <div class="row">
                         <!-- ***** Features Small Item Start ***** -->
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12"
+                            data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
                             <div class="features-small-item">
                                 <div class="icon">
                                     <i><img src="assets/images/featured-item-01.png" alt=""></i>
                                 </div>
-                                <h5 class="features-title">Modern Strategy</h5>
+                                <h5 class="features-title">Goplus Program</h5>
                                 <p>A new rewards programme that rewards you every time you visit.</p>
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
 
                         <!-- ***** Features Small Item Start ***** -->
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12"
+                            data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
                             <div class="features-small-item">
                                 <div class="icon">
                                     <i><img src="assets/images/featured-item-01.png" alt=""></i>
                                 </div>
-                                <h5 class="features-title">Best Relationship</h5>
+                                <h5 class="features-title">Best Offers</h5>
                                 <p>Contact us immediately if you have a question in mind</p>
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
 
                         <!-- ***** Features Small Item Start ***** -->
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12"
+                            data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
                             <div class="features-small-item">
                                 <div class="icon">
                                     <i><img src="assets/images/featured-item-01.png" alt=""></i>
                                 </div>
-                                <h5 class="features-title">Ultimate Marketing</h5>
-                                <p>With Shell Go+ you�ll earn visits, instead of points.</p>
+                                <h5 class="features-title">Earn Points</h5>
+                                <p>With Shell Go+ you'll earn visits, instead of points.</p>
                             </div>
                         </div>
                         <!-- ***** Features Small Item End ***** -->
@@ -185,16 +220,18 @@ https://templatemo.com/tm-535-softy-pinko
     <section class="section padding-top-70 padding-bottom-0" id="features">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center"
+                    data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
                     <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
                     <div class="left-heading">
-                        <h2 class="section-title">Let’s discuss about you project</h2>
+                        <h2 class="section-title">Let’s discuss about your rewards</h2>
                     </div>
                     <div class="left-text">
-                        <p>All you have to do is spend 10 or more on fuel or 2 or more in the shop. You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. </p>
+                        <p>All you have to do is spend 10 or more on fuel or 2 or more in the shop. You'll get 10% off
+                            all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. </p>
                     </div>
                 </div>
             </div>
@@ -213,14 +250,16 @@ https://templatemo.com/tm-535-softy-pinko
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
                     <div class="left-heading">
-                        <h2 class="section-title">We can help you to grow your business</h2>
+                        <h2 class="section-title">With Shell V-Power, get money off fuel every 10 visits</h2>
                     </div>
                     <div class="left-text">
-                        <p>Get money off fuel every 10 visits and even more with Shell V-Power. You'll also get money off fuel every 10 visits, and plenty of treats and surprises along the way..</p>
+                        <p>Get money off fuel every 10 visits and even more with Shell V-Power. You'll also get money
+                            off fuel every 10 visits, and plenty of treats and surprises along the way..</p>
                     </div>
                 </div>
                 <div class="col-lg-1"></div>
-                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big"
+                    data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
                     <img src="assets/images/right-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
                 </div>
             </div>
@@ -235,8 +274,9 @@ https://templatemo.com/tm-535-softy-pinko
                 <div class="row">
                     <div class="offset-lg-3 col-lg-6">
                         <div class="info">
-                            <h1>Work Process</h1>
-                            <p>Start using Shell Go+ right away. Download the app to get your digital card.Get 10% off every hot drink, every time</p>
+                            <h1>Reward Program</h1>
+                            <p>Start using Shell Go+ right away. Download the app to get your digital card.Get 10% off
+                                every hot drink, every time</p>
                         </div>
                     </div>
                 </div>
@@ -260,29 +300,29 @@ https://templatemo.com/tm-535-softy-pinko
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
                             <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Discuss</strong>
-                            <span>Godard pabst prism fam cliche.</span>
+                            <strong>Go Plus</strong>
+                            <span>Best Reward prog for Shell customers</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
                             <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Revise</strong>
+                            <strong>Get 10% off</strong>
                             <span>Get 10% off delicious food ranges on the go, every time.</span>
                         </a>
                     </div>
                     <div class="col-lg-2 col-md-3 col-sm-6 col-6">
                         <a href="#" class="mini-box">
                             <i><img src="assets/images/work-process-item-01.png" alt=""></i>
-                            <strong>Approve</strong>
-                            <span>Godard pabst prism fam cliche.</span>
+                            <strong>Activate Offer</strong>
+                            <span>Get shell Vpower Coupons.</span>
                         </a>
                     </div>
-                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">  
                         <a href="#" class="mini-box">
                             <i><img src="assets/images/work-process-item-01.png" alt=""></i>
                             <strong>Launch</strong>
-                            <span>Godard pabst prism fam cliche.</span>
+                            <span>Launch and download shell Goplus app</span>
                         </a>
                     </div>
                 </div>
@@ -304,7 +344,9 @@ https://templatemo.com/tm-535-softy-pinko
                 </div>
                 <div class="offset-lg-3 col-lg-6">
                     <div class="center-text">
-                        <p>DYou'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You�ll also get money off fuel every 10 visits, and plenty of treats and surprises along the way..</p>
+                        <p>DYou'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges.
+                            You'll also get money off fuel every 10 visits, and plenty of treats and surprises along the
+                            way..</p>
                     </div>
                 </div>
             </div>
@@ -316,49 +358,55 @@ https://templatemo.com/tm-535-softy-pinko
                     <div class="team-item">
                         <div class="team-content">
                             <i><img src="assets/images/testimonial-icon.png" alt=""></i>
-                            <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You�ll also get money off fuel every 10 visits, and plenty of treats and surprises along the way..</p>
+                            <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges.
+                                You'll also get money off fuel every 10 visits, and plenty of treats and surprises along
+                                the way..</p>
                             <div class="user-image">
                                 <img src="http://placehold.it/60x60" alt="">
                             </div>
                             <div class="team-info">
-                                <h3 class="user-name">Catherine Soft</h3>
-                                <span>Managing Director</span>
+                                <h3 class="user-name">Sumit</h3>
+                                <span>Goplus customer</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- ***** Testimonials Item End ***** -->
-                
+
                 <!-- ***** Testimonials Item Start ***** -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="team-item">
                         <div class="team-content">
                             <i><img src="assets/images/testimonial-icon.png" alt=""></i>
-                            <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You�ll also get money off fuel every 10 visits, and plenty of treats and surprises along the way..</p>
+                            <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges.
+                                You'll also get money off fuel every 10 visits, and plenty of treats and surprises along
+                                the way..</p>
                             <div class="user-image">
                                 <img src="http://placehold.it/60x60" alt="">
                             </div>
                             <div class="team-info">
-                                <h3 class="user-name">Kelvin Wood</h3>
-                                <span>Digital Marketer</span>
+                                <h3 class="user-name">Alex</h3>
+                                <span>Vpower customer</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- ***** Testimonials Item End ***** -->
-                
+
                 <!-- ***** Testimonials Item Start ***** -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="team-item">
                         <div class="team-content">
                             <i><img src="assets/images/testimonial-icon.png" alt=""></i>
-                            <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You�ll also get money off fuel every 10 visits, and plenty of treats and surprises along the way..</p>
+                            <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges.
+                                You'll also get money off fuel every 10 visits, and plenty of treats and surprises along
+                                the way..</p>
                             <div class="user-image">
                                 <img src="http://placehold.it/60x60" alt="">
                             </div>
                             <div class="team-info">
-                                <h3 class="user-name">David Martin</h3>
-                                <span>Website Manager</span>
+                                <h3 class="user-name">David</h3>
+                                <span>Vpower shell customer</span>
                             </div>
                         </div>
                     </div>
@@ -376,12 +424,14 @@ https://templatemo.com/tm-535-softy-pinko
             <div class="row">
                 <div class="col-lg-12">
                     <div class="center-heading">
-                        <h2 class="section-title">Pricing Plans</h2>
+                        <h2 class="section-title">Rewards Plans</h2>
                     </div>
                 </div>
                 <div class="offset-lg-3 col-lg-6">
                     <div class="center-text">
-                        <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You�ll also get money off fuel every 10 visits, and plenty of treats and surprises along the way.</p>
+                        <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You'll
+                            also get money off fuel every 10 visits, and plenty of treats and surprises along the way.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -389,7 +439,8 @@ https://templatemo.com/tm-535-softy-pinko
 
             <div class="row">
                 <!-- ***** Pricing Item Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                <div class="col-lg-4 col-md-6 col-sm-12"
+                    data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
                     <div class="pricing-item">
                         <div class="pricing-header">
                             <h3 class="pricing-title">Starter</h3>
@@ -401,23 +452,24 @@ https://templatemo.com/tm-535-softy-pinko
                                 <span class="period">monthly</span>
                             </div>
                             <ul class="list">
-                                <li class="active">60 GB space</li>
-                                <li class="active">600 GB transfer</li>
-                                <li class="active">Pro Design Panel</li>
-                                <li>15-minute support</li>
-                                <li>Unlimited Emails</li>
-                                <li>24/7 Security</li>
+                                <li class="active">60 ltr oil</li>
+                                <li class="active">600 ltr transfer</li>
+                                <li class="active">Pro VIP access</li>
+                                <li>Free Coffee</li>
+                                <li>100 loyalty point</li>
+                                <li>24/7 Support</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
-                            <a href="#" class="main-button">Purchase Now</a>
+                            <a href="#" class="main-button">Activate Now</a>
                         </div>
                     </div>
                 </div>
                 <!-- ***** Pricing Item End ***** -->
 
                 <!-- ***** Pricing Item Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                <div class="col-lg-4 col-md-6 col-sm-12"
+                    data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
                     <div class="pricing-item active">
                         <div class="pricing-header">
                             <h3 class="pricing-title">Premium</h3>
@@ -429,23 +481,24 @@ https://templatemo.com/tm-535-softy-pinko
                                 <span class="period">monthly</span>
                             </div>
                             <ul class="list">
-                                <li class="active">120 GB space</li>
-                                <li class="active">1200 GB transfer</li>
-                                <li class="active">Pro Design Panel</li>
-                                <li class="active">15-minute support</li>
+                                <li class="active">120 ltr oil</li>
+                                <li class="active">1200 ltr transfer</li>
+                                <li class="active">Pro VIP access</li>
+                                <li class="active">Free Coffee</li>
                                 <li>Unlimited Emails</li>
-                                <li>24/7 Security</li>
+                                <li>24/7 Support</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
-                            <a href="#" class="main-button">Purchase Now</a>
+                            <a href="#" class="main-button">Activate Now</a>
                         </div>
                     </div>
                 </div>
                 <!-- ***** Pricing Item End ***** -->
 
                 <!-- ***** Pricing Item Start ***** -->
-                <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                <div class="col-lg-4 col-md-6 col-sm-12"
+                    data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
                     <div class="pricing-item">
                         <div class="pricing-header">
                             <h3 class="pricing-title">Advanced</h3>
@@ -457,16 +510,16 @@ https://templatemo.com/tm-535-softy-pinko
                                 <span class="period">monthly</span>
                             </div>
                             <ul class="list">
-                                <li class="active">250 GB space</li>
-                                <li class="active">5000 GB transfer</li>
-                                <li class="active">Pro Design Panel</li>
-                                <li class="active">15-minute support</li>
-                                <li class="active">Unlimited Emails</li>
-                                <li class="active">24/7 Security</li>
+                                <li class="active">250 ltr oil</li>
+                                <li class="active">5000ltr transfer</li>
+                                <li class="active">Pro VIP access</li>
+                                <li class="active">Free Coffee</li>
+                                <li class="active">Unlimited Offer</li>
+                                <li class="active">24/7 Support</li>
                             </ul>
                         </div>
                         <div class="pricing-footer">
-                            <a href="#" class="main-button">Purchase Now</a>
+                            <a href="#" class="main-button">Activate Now</a>
                         </div>
                     </div>
                 </div>
@@ -484,19 +537,19 @@ https://templatemo.com/tm-535-softy-pinko
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item decoration-bottom">
                             <strong>126</strong>
-                            <span>Projects</span>
+                            <span>Offers</span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item decoration-top">
                             <strong>63</strong>
-                            <span>Happy Clients</span>
+                            <span>Happy Customers</span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="count-item decoration-bottom">
                             <strong>18</strong>
-                            <span>Awards Wins</span>
+                            <span>Rewards Wins</span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-12">
@@ -509,7 +562,7 @@ https://templatemo.com/tm-535-softy-pinko
             </div>
         </div>
     </section>
-    <!-- ***** Counter Parallax End ***** -->   
+    <!-- ***** Counter Parallax End ***** -->
 
     <!-- ***** Blog Start ***** -->
     <section class="section" id="blog">
@@ -523,7 +576,9 @@ https://templatemo.com/tm-535-softy-pinko
                 </div>
                 <div class="offset-lg-3 col-lg-6">
                     <div class="center-text">
-                        <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You�ll also get money off fuel every 10 visits, and plenty of treats and surprises along the way..</p>
+                        <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You'll
+                            also get money off fuel every 10 visits, and plenty of treats and surprises along the way..
+                        </p>
                     </div>
                 </div>
             </div>
@@ -537,10 +592,10 @@ https://templatemo.com/tm-535-softy-pinko
                         </div>
                         <div class="blog-content">
                             <h3>
-                                <a href="#">Vivamus ac vehicula dui</a>
+                                <a href="#">Get 10% off</a>
                             </h3>
                             <div class="text">
-                               Cras aliquet ligula dui, vitae fermentum velit tincidunt id. Praesent eu finibus nunc. Nulla in sagittis eros. Aliquam egestas augue.
+                                You'll get 10% off all hot drinks, deli2go by Shell food ranges. also get money off fuel every 10 visits, 
                             </div>
                             <a href="#" class="main-button">Read More</a>
                         </div>
@@ -553,10 +608,12 @@ https://templatemo.com/tm-535-softy-pinko
                         </div>
                         <div class="blog-content">
                             <h3>
-                                <a href="#">Phasellus convallis augue</a>
+                                <a href="#">Free Coffee</a>
                             </h3>
                             <div class="text">
-                                You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You�ll also get money off fuel every 10 visits, and plenty of treats and surprises along the way..
+                                You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges.
+                                You'll also get money off fuel every 10 visits, and plenty of treats and surprises along
+                                the way..
                             </div>
                             <a href="#" class="main-button">Read More</a>
                         </div>
@@ -569,10 +626,12 @@ https://templatemo.com/tm-535-softy-pinko
                         </div>
                         <div class="blog-content">
                             <h3>
-                                <a href="#">Nam gravida purus non</a>
+                                <a href="#">GoPlus Reward</a>
                             </h3>
                             <div class="text">
-                                You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You�ll also get money off fuel every 10 visits, and plenty of treats and surprises along the way.
+                                You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges.
+                                You'll also get money off fuel every 10 visits, and plenty of treats and surprises along
+                                the way.
                             </div>
                             <a href="#" class="main-button">Read More</a>
                         </div>
@@ -595,7 +654,9 @@ https://templatemo.com/tm-535-softy-pinko
                 </div>
                 <div class="offset-lg-3 col-lg-6">
                     <div class="center-text">
-                        <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You�ll also get money off fuel every 10 visits, and plenty of treats and surprises along the way.</p>
+                        <p>You'll get 10% off all hot drinks, deli2go and Jamie Oliver deli by Shell food ranges. You'll
+                            also get money off fuel every 10 visits, and plenty of treats and surprises along the way.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -606,8 +667,8 @@ https://templatemo.com/tm-535-softy-pinko
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <h5 class="margin-bottom-30">Keep in touch</h5>
                     <div class="contact-text">
-                        <p>110-220 Quisque diam odio, maximus ac consectetur eu, 10260
-                        <br>auctor non lorem</p>
+                        <p>Shell UK ltd, London
+                            <br>York road</p>
                         <p>You are NOT allowed to re-distribute shell offers. Thank you.</p>
                     </div>
                 </div>
@@ -617,28 +678,31 @@ https://templatemo.com/tm-535-softy-pinko
                 <div class="col-lg-8 col-md-6 col-sm-12">
                     <div class="contact-form">
                         <form id="contact" action="" method="get">
-                          <div class="row">
-                            <div class="col-lg-6 col-md-12 col-sm-12">
-                              <fieldset>
-                                <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                              </fieldset>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name"
+                                            placeholder="Full Name" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="email" class="form-control" id="email"
+                                            placeholder="E-Mail Address" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message"
+                                            placeholder="Your Message" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                                    </fieldset>
+                                </div>
                             </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12">
-                              <fieldset>
-                                <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail Address" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="main-button">Send Message</button>
-                              </fieldset>
-                            </div>
-                          </div>
                         </form>
                     </div>
                 </div>
@@ -647,7 +711,7 @@ https://templatemo.com/tm-535-softy-pinko
         </div>
     </section>
     <!-- ***** Contact Us End ***** -->
-    
+
     <!-- ***** Footer Start ***** -->
     <footer>
         <div class="container">
@@ -669,7 +733,7 @@ https://templatemo.com/tm-535-softy-pinko
             </div>
         </div>
     </footer>
-    
+
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
 
@@ -681,10 +745,11 @@ https://templatemo.com/tm-535-softy-pinko
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    
+    <script src="assets/js/imgfix.min.js"></script>
+
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
 
-  </body>
+</body>
+
 </html>
