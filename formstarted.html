@@ -56,27 +56,19 @@ hr {
     <!--/Preconnect and DNS-Prefetch-->
     <!--Data Layer to enable rich data collection and targeting-->
     <script>
-        window.digitalData = {
-            "page": {
-                "pageInfo": {
-                    "pageName": "Home page sumit"
-                }
-            },
+       window.dataLayer = window.dataLayer || [];
+dataLayer.push({
+"event" : "Form Started",
+"metric" : "engage",
+"form" : {
+"formType" : "Sonnen Contact us" ,
+"formName" : "Sonnen Become Partner",
+"formField": [{            
+            "fieldID":  "first_name"         
+        }]
+}
 
-            "user": [
-                {
-                    "profile": [
-                        {
-                            "profileInfo": {},
-                            "attributes": {
-                                "loggedIn": true,
-                                "username": "112ca06ed53d3db37e4cea49cc45b71e"
-                            }
-                        }
-                    ]
-                }
-            ]
-        };
+});
     </script>
     <!--/Data Layer-->
     <!--jQuery or other helper libraries-->
