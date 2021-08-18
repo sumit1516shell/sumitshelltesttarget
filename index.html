@@ -18,27 +18,21 @@
     <!--/Preconnect and DNS-Prefetch-->
     <!--Data Layer to enable rich data collection and targeting-->
     <script>
-        window.digitalData = {
-            "page": {
-                "pageInfo": {
-                    "pageName": "Home page sumit"
+window.dataLayer = window.dataLayer || []; 
+dataLayer.push({
+                "event": "Page Loaded",
+                "metric":"attract",
+                "page": {
+                    "pageName": "Sonnen USA home", 
+                    "siteSection": "home", 
+	            "subSection1":"home",
+                    "subSection2":"home",
+                    "market": "USA",
+                    "language": "en", 
+                    "platform": "website",  
+                    "cvp": "Sonnen",
+                    "siteKey": "front end portal"
                 }
-            },
-
-            "user": [
-                {
-                    "profile": [
-                        {
-                            "profileInfo": {},
-                            "attributes": {
-                                "loggedIn": true,
-                                "username": "112ca06ed53d3db37e4cea49cc45b71e"
-                            }
-                        }
-                    ]
-                }
-            ]
-        };
     </script>
     <!--/Data Layer-->
     <!--jQuery or other helper libraries-->
