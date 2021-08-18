@@ -55,29 +55,19 @@ hr {
     <link rel="dns-prefetch" href="//techmarketingdemos.sc.omtrdc.net">
     <!--/Preconnect and DNS-Prefetch-->
     <!--Data Layer to enable rich data collection and targeting-->
-    <script>
-        window.digitalData = {
-            "page": {
-                "pageInfo": {
-                    "pageName": "Home page sumit"
-                }
-            },
+    window .dataLayer = window .dataLayer || [];
+dataLayer.push({
+"event" : "Form Submission Succeeded",
+"metric" : "convert",
+"form" : {
+"formType" : "Sonnen Become Partner" ,
+"formName" : "Sonnen contact us",
+"marketingPrefTick" : "Y",
+"consentTick" : "Y",
+"commented": "Y"
+}
 
-            "user": [
-                {
-                    "profile": [
-                        {
-                            "profileInfo": {},
-                            "attributes": {
-                                "loggedIn": true,
-                                "username": "112ca06ed53d3db37e4cea49cc45b71e"
-                            }
-                        }
-                    ]
-                }
-            ]
-        };
-    </script>
+});
     <!--/Data Layer-->
     <!--jQuery or other helper libraries-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
