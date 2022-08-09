@@ -20,88 +20,9 @@ from datetime import datetime
 now = datetime.now()
 now.strftime("%m/%d/%Y, %H:%M:%S")
 
-import sys
-import subprocess
 
-# implement pip as a subprocess:
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
-'xlsxwriter'])
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
-'adobe_analytics'])
-report_suite = 'shellglobal19prod'
-import pandas as pd
-import numpy as np
-import json
-from adobe_analytics import Client
-
-client = Client('Sumit.S.Kumar4@shell.com:Shell', '3f034478b883089b4979f34b61528851')
-suite = client.suites()[report_suite]
-params = {'rsid_list': [report_suite]}
-writer = pd.ExcelWriter('SDR_'+report_suite+'.xlsx', engine='xlsxwriter')
-workbook  = writer.book
-format_pc = workbook.add_format({'num_format': '0.0%'})
-format_num = workbook.add_format({'num_format': '#,##0'})
-format_header = workbook.add_format({'bold': True,'text_wrap': True,'valign': 'top','bg_color': '#DCE6F1','border': 1})
-format_title = workbook.add_format({'bold': True,'text_wrap': False,'valign': 'top','font_size': 14})
-format_red = workbook.add_format({'bg_color': '#FFC7CE','font_color': '#9C0006'})
-format_green = workbook.add_format({'bg_color': '#C6EFCE','font_color': '#006100'})
-def write_to_excel(df, sn, t, cw, cf=False):
-    cols = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R']
-    df.to_excel(writer, sheet_name=sn, startrow=4, startcol=1, index=False)
-    worksheet = writer.sheets[sn]
-    worksheet.write('B2', 'Report Suite - ' + t, format_title)
-    worksheet.write('B3', rs_name)
-    for c, v in enumerate(df.columns.values):
-        colref = cols[c+1] + '5'
-        worksheet.write(colref, v, format_header)
-        colref = cols[c+1] + ':' + cols[c+1]
-        worksheet.set_column(colref,cw[c])
-    worksheet.set_column('A:A',2)
-    worksheet.set_row(4,15)
-    if isinstance(cf, dict):
-        cref = cf['col']+ '6:' + cf['col'] + str(5 + len(df))
-        for k in cf['cf']:
-            worksheet.conditional_format(cref, {'type': 'cell','criteria': '=','value': k,'format': cf['cf'][k]})
-          # GET RS SETTINGS
-data = client.request('ReportSuite', 'GetSettings', params)
-rs_settings = pd.json_normalize(data[0])
-rs_settings = rs_settings[['rsid','site_title','base_currency','base_url','calendar_type','default_page','ip_obfuscation','time_zone']].melt()
-rs_settings.columns = ['setting','value']
-rs_name=rs_settings.loc[rs_settings['setting']=='site_title','value'].values[0]
-
-write_to_excel(rs_settings, 'REPORT SUITE','Settings', [25,25])
-# GET EVARS
-data = client.request('ReportSuite', 'GetEvars', params)
-evars = pd.json_normalize(data[0]['evars'])
-evars = evars[['id','name','enabled','type','allocation_type','expiration_type','expiration_custom_days','description']]
-
-write_to_excel(evars, 'EVARS','eVars', [12,65,8,12,20,15,23,22,100],{'col':'D','cf':{'False':format_red,\
-                                                                                       'True':format_green}})
-# GET PROPS
-data = client.request('ReportSuite', 'GetProps', params)
-props = pd.json_normalize(data[0]['props'])
-props = props[['id','name','enabled','pathing_enabled','list_enabled','participation_enabled','case_insensitive','case_insensitive_date_enabled','description']]
-
-write_to_excel(props, 'PROPS','Props', [12,65,8,20,20,20,20,20,29,100],{'col':'D','cf':{'FALSE':format_red,\
-                                                                                        'TRUE':format_green}})
-# GET EVENTS
-data = client.request('ReportSuite', 'GetEvents', params)
-events = pd.json_normalize(data[0]['events'])
-events = events[['id','name','type','default_metric','participation','serialization','polarity','visibility','description']]
-
-write_to_excel(events, 'EVENTS','Success Events', [14,65,25,15,15,25,15,15,100],{'col':'D','cf':{'"disabled"':format_red,\
-                                                                                                    '"numeric"':format_green,\
-                                                                                                    '"currency"':format_green,\
-                                                                                                    '"counter"':format_green,\
-                                                                                                    '"counter_no_subrelations"':format_green}})
-# GET LIST VARS
-data = client.request('ReportSuite', 'GetListVariables', params)
-listvars = pd.json_normalize(data[0]['list_variables'])
-listvars = listvars[['id','name','enabled','allocation_type','value_delimiter','max_values','expiration_custom_days','expiration_type','description']]
-
-write_to_excel(listvars, 'LISTVARS','List Variables', [8,35,12,15,15,15,25,15,100],{'col':'D','cf':{'FALSE':format_red,\
-                                                                                        'TRUE':format_green}})
-writer.save()
     </py-script>
+    
+    <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@sumit1516/AttractiveSturdyInfo#main.py?embed=true"></iframe>
   </body>
 </html>
