@@ -37,7 +37,7 @@
                         }
                 });
         </script>
-    <script>
+    <script>/*
 window.dataLayer = window.dataLayer || []; 
 dataLayer.push({
                 "event": "Page Loaded",
@@ -52,8 +52,32 @@ dataLayer.push({
                     "platform": "website",  
                     "cvp": "Sonnen",
                     "siteKey": "front end portal"
-                }})
+                }}) */
     </script>
+
+	<script>
+window.dataLayer = window.dataLayer || []; 
+window.dataLayer.push({
+    "event": "Page Loaded",
+    "metric": "attract",
+    "page": {
+        "pageName": "clubsmart home", 
+        "siteSection": "home", 
+        "subSection1": "home",
+        "subSection2": "home",
+        "market": "UK",
+        "language": "en", 
+        "platform": "website",  
+        "cvp": "Sonnen",
+        "siteKey": "front end portal"
+    },
+    "user": {
+        "custKey": "78f9a215-50f3-4bb5-813d-e91170df7838", // ssoid/ userid when available
+        "loginStatus": "loggedin",
+        "userType": "known"
+    }
+});
+</script>
     <!--/Data Layer-->
     <!--jQuery or other helper libraries-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -101,8 +125,8 @@ dataLayer.push({
             }, timeout);
         }(window, document, "body {opacity: 0 !important}", 3000));</script>
     <!--Launch Header Embed Code: REPLACE THE NEXT LINE WITH THE EMBED CODE FROM YOUR OWN DEVELOPMENT ENVIRONMENT-->
-   <script src="//assets.adobedtm.com/fdd3d8394b31/625d365f4ab2/launch-4d7956c690d3-development.min.js" async></script>
-    
+<!--   <script src="//assets.adobedtm.com/fdd3d8394b31/625d365f4ab2/launch-4d7956c690d3-development.min.js" async></script> BEACON added below after removing Retail-Target testing-->
+  <script src="https://assets.adobedtm.com/fdd3d8394b31/86a77f138b90/launch-0ffd97aafde3.min.js" async></script>  
     <!--/Launch Header Embed Code-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
