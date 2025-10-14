@@ -78,24 +78,27 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Shell UK","url":"https://www.shell.co.uk/","logo":"https://www.example.com/assets/logo.png","sameAs":[]}
   </script>
-  <!-- Adobe Launch embed -->
-<script src="https://assets.adobedtm.com/fdd3d8394b31/c31dcce1ff15/launch-ca95bcef456d-developmentpt>
-
-<!-- Data Layer -->
+  <!-- Block 1: dataLayer init -->
 <script>
   window.dataLayer = window.dataLayer || [];
 
-  // Initial page view event
+  // Optional: fire an initial page_view before Launch (useful if you map it)
   window.dataLayer.push({
     event: "page_view",
     page: {
       template: "shell-home",
-      language: document.documentElement.lang,
+      language: document.documentElement.lang || "en",
       url: location.href
     }
   });
+</script>
 
-  // Page Loaded event with detailed attributes
+<!-- Block 2: Adobe Launch (Dev library example) -->
+<script src="https://assets.adobedtm.com/fdd3d8394b31/caunch-ca95bcef456d-development.min.js</script>
+
+<!-- Block 3: Your Page Loaded event (after Launch tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     event: "Page Loaded",
     metric: "attract",
