@@ -78,6 +78,40 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Shell UK","url":"https://www.shell.co.uk/","logo":"https://www.example.com/assets/logo.png","sameAs":[]}
   </script>
+  <!-- Adobe Launch embed -->
+<script src="https://assets.adobedtm.com/fdd3d8394b31/c31dcce1ff15/launch-ca95bcef456d-developmentpt>
+
+<!-- Data Layer -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  // Initial page view event
+  window.dataLayer.push({
+    event: "page_view",
+    page: {
+      template: "shell-home",
+      language: document.documentElement.lang,
+      url: location.href
+    }
+  });
+
+  // Page Loaded event with detailed attributes
+  window.dataLayer.push({
+    event: "Page Loaded",
+    metric: "attract",
+    page: {
+      pageName: "Shell home",
+      siteSection: "home",
+      subSection1: "home",
+      subSection2: "home",
+      market: "UK",
+      language: "en",
+      platform: "website",
+      cvp: "shell uk",
+      siteKey: "front end portal"
+    }
+  });
+</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
@@ -201,25 +235,6 @@
     <div class="legal">© <span id="year"></span> Shell UK (template). All rights reserved.</div>
   </footer>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({event: "page_view", page: { template: "shell-home", language: document.documentElement.lang, url: location.href }});
-    document.addEventListener("click", (e) => {
-      const a = e.target.closest("[data-cta-name]");
-      if(!a) return;
-      window.dataLayer.push({event: "cta_click", cta: { name: a.dataset.ctaName, text: a.textContent?.trim(), href: a.getAttribute("href") }});
-    });
-    const btn = document.querySelector(".menu-btn");
-    const menu = document.querySelector("#primary-menu");
-    btn?.addEventListener("click", () => {
-      const expanded = btn.getAttribute("aria-expanded") === "true";
-      btn.setAttribute("aria-expanded", (!expanded).toString());
-      menu.setAttribute("aria-expanded", (!expanded).toString());
-    });
-    document.getElementById("cookie-prefs")?.addEventListener("click", (e) => {
-      e.preventDefault(); if (window.OneTrust?.ToggleInfoDisplay) { window.OneTrust.ToggleInfoDisplay(); }
-    });
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  
 </body>
 </html>
