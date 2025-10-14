@@ -1,40 +1,7 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-   <!-- Adobe Launch embed -->
-<script src="https://assets.adobed394b31/c31dcce1ff15/launch-ca95bcef456d-development.min.js</script>
-
-<!-- Data Layer -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  // Initial page view event
-  window.dataLayer.push({
-    event: "page_view",
-    page: {
-      template: "shell-recharge",
-      language: document.documentElement.lang,
-      url: location.href
-    }
-  });
-
-  // Page Loaded event with detailed attributes
-  window.dataLayer.push({
-    event: "Page Loaded",
-    metric: "attract",
-    page: {
-      pageName: "Home:Recharge",
-      siteSection: "home",
-      subSection1: "home",
-      subSection2: "home",
-      market: "UK",
-      language: "en",
-      platform: "website",
-      cvp: "shell uk",
-      siteKey: "front end portal"
-    }
-  });
-</script>
+ 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Shell Recharge | EV Charging (Template)</title>
@@ -96,7 +63,43 @@
   </style>
 </head>
 <body>
- 
+ <!-- Block 1: dataLayer init -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  // Optional: initial page_view
+  window.dataLayer.push({
+    event: "page_view",
+    page: {
+      template: "shell-recharge",
+      language: document.documentElement.lang || "en",
+      url: location.href
+    }
+  });
+</script>
+
+<!-- Block 2: Adobe Launch (Dev library example) -->
+https://assets.adobedtm.com/fdd3d8394b31/c31dcce1ff15/launch-ca95bcef456d-development.min.js</script>
+
+<!-- Block 3: Your Page Loaded event (after Launch tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "Page Loaded",
+    metric: "attract",
+    page: {
+      pageName: "Home:Recharge",
+      siteSection: "home",
+      subSection1: "home",
+      subSection2: "home",
+      market: "UK",
+      language: "en",
+      platform: "website",
+      cvp: "shell uk",
+      siteKey: "front end portal"
+    }
+  });
+</script>
   <a class="visually-hidden" href="#main">Skip to content</a>
   <header>
     <div class="container topbar">
