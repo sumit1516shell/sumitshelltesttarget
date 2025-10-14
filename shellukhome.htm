@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shell UK | Home (Template)</title>
+  <meta name="description" content="Placeholder home template with hero banner, cards, and sections ready for content integration." />
+  <meta name="theme-color" content="#FFD500" />
+  <link rel="icon" href="/assets/favicon.png" />
+  <style>
+    :root{
+      --brand-yellow:#FFD500; --brand-red:#E03C31; --brand-black:#101114;
+      --brand-grey-100:#f7f7f8; --brand-grey-200:#ececef; --brand-grey-700:#4a4f57;
+      --text:#101114; --bg:#ffffff; --link:#0b69ff; --focus:#0b69ff;
+      --radius:12px; --shadow:0 6px 18px rgba(16,17,20,0.08); --maxw:1200px;
+      --space: clamp(12px, 2vw, 20px); --space-lg: clamp(18px, 3vw, 32px);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+    .visually-hidden{position:absolute!important;clip:rect(1px,1px,1px,1px);clip-path:inset(50%);height:1px;width:1px;overflow:hidden;white-space:nowrap}
+    .skip-link{position:absolute;left:-999px;top:auto;background:#fff;color:#000;padding:8px 12px;border-radius:8px;box-shadow:var(--shadow)}
+    .skip-link:focus{left:8px;top:8px;z-index:9999}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:0 var(--space)}
+    header{border-bottom:1px solid var(--brand-grey-200);background:#fff;position:sticky;top:0;z-index:50}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px var(--space)}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:700}
+    .brand-badge{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--brand-yellow);border:3px solid var(--brand-red);color:#000;font-weight:900}
+    nav ul{list-style:none;display:flex;gap:14px;align-items:center;margin:0;padding:0}
+    nav a{color:var(--text);text-decoration:none;font-weight:600}
+    nav a:hover,nav a:focus{color:var(--brand-red)}
+    .menu-btn{display:none}
+    @media (max-width: 900px){nav{display:none}.menu-btn{display:inline-flex;align-items:center;gap:8px}.menu[aria-expanded="true"]{display:block}.menu ul{flex-direction:column;align-items:flex-start;padding:var(--space)}.menu{border-top:1px solid var(--brand-grey-200)}}
+
+    .hero{background:var(--brand-grey-100)}
+    .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--space-lg);padding:var(--space-lg) 0}
+    .hero img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .eyebrow{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-red);font-weight:800}
+    h1{font-size:clamp(1.6rem, 2.8vw, 2.6rem);margin:.2em 0}
+    .lead{color:var(--brand-grey-700);max-width:60ch}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:none;border-radius:999px;padding:12px 16px;font-weight:700;cursor:pointer;text-decoration:none}
+    .btn.primary{background:var(--brand-red);color:#fff}
+    .btn.secondary{background:#fff;color:var(--brand-red);border:2px solid var(--brand-red)}
+    .btn:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+    @media (max-width: 900px){.hero-inner{grid-template-columns:1fr}}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-lg);margin:var(--space-lg) 0}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--brand-grey-200)}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card .body{padding:16px}
+    .card h3{margin:.2em 0}
+    .card p{color:var(--brand-grey-700)}
+    @media (max-width: 900px){.cards{grid-template-columns:1fr}}
+
+    section{padding:var(--space-lg) 0}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-bottom:10px}
+    .section-head h2{margin:0;font-size:clamp(1.3rem,2.2vw,1.8rem)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space)}
+    @media (max-width:900px){.grid-3{grid-template-columns:1fr}}
+
+    .newsletter{background:var(--brand-grey-100);border-radius:var(--radius);padding:var(--space-lg)}
+    .newsletter form{display:flex;gap:10px;flex-wrap:wrap}
+    .newsletter input[type="email"]{flex:1;min-width:220px;padding:12px;border-radius:999px;border:1px solid var(--brand-grey-200)}
+    .newsletter button{padding:12px 18px;border-radius:999px;border:none;background:var(--brand-red);color:#fff;font-weight:800}
+
+    footer{border-top:1px solid var(--brand-grey-200);background:#fff}
+    .foot{display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:var(--space-lg);padding:var(--space-lg) 0}
+    .foot h4{margin-top:0}
+    .foot ul{list-style:none;margin:0;padding:0}
+    .foot a{text-decoration:none;color:var(--text)}
+    .foot a:hover{color:var(--brand-red)}
+    .legal{font-size:.9rem;color:var(--brand-grey-700);padding:0 0 var(--space-lg)}
+    @media (max-width:900px){.foot{grid-template-columns:1fr 1fr}}
+    @media (max-width:650px){.foot{grid-template-columns:1fr}}
+    @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Shell UK","url":"https://www.shell.co.uk/","logo":"https://www.example.com/assets/logo.png","sameAs":[]}
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header role="banner">
+    <div class="topbar container">
+      <a class="brand" href="/" aria-label="Shell UK home">
+        <span class="brand-badge" aria-hidden="true">S</span>
+        <span>Shell UK</span>
+      </a>
+      <button class="menu-btn btn secondary" aria-controls="primary-menu" aria-expanded="false"><span aria-hidden="true">☰</span><span>Menu</span></button>
+      <nav id="primary-menu" class="menu" aria-label="Primary">
+        <ul>
+          <li><a href="#fuels">Fuels & Services</a></li>
+          <li><a href="#loyalty">Loyalty</a></li>
+          <li><a href="#stations">Find a station</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#sustainability">Sustainability</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-label="Featured banner">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow">Featured</p>
+          <h1>Welcome to Shell UK</h1>
+          <p class="lead">A starter hero section now wired to Shell-owned images (demo). Swap to approved UK assets before go-live.</p>
+          <div class="actions">
+            <a class="btn primary" href="#" data-cta="primary" data-cta-name="Find a station">Find a station</a>
+            <a class="btn secondary" href="#loyalty" data-cta-name="GoPlus">Join Shell Go+</a>
+          </div>
+        </div>
+        <div>
+          <!-- Updated responsive hero images from Shell Recharge CDN for demo -->
+          <picture>
+            <source media="(min-width: 1024px)" srcset="https://a.storyblok.com/f/85281/1900x1200/6c083a5a68/about-shell-recharge.jpeg" />
+            <source media="(min-width: 600px)" srcset="https://a.storyblok.com/f/85281/1280x720/a026d94744/shell-recharge-solutions-video-poster.jpg" />
+            <img src="https://a.storyblok.com/f/85281/1024x768/7bc4c61ada/shell-recharge_public-charging_-man-charges-at-ultra-rapid-350kw-public-charge-point-min.jpg" alt="Shell forecourt with Shell Recharge ultra-rapid chargers in use (demo banner image)" width="1900" height="1200" loading="eager" fetchpriority="high" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="fuels" aria-labelledby="fuels-heading">
+      <div class="section-head"><h2 id="fuels-heading">Explore</h2></div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://a.storyblok.com/f/85281/1024x768/7bc4c61ada/shell-recharge_public-charging_-man-charges-at-ultra-rapid-350kw-public-charge-point-min.jpg" alt="EV charging at Shell Recharge (placeholder card)" loading="lazy" />
+          <div class="body">
+            <h3>Fuels & Services</h3>
+            <p>Describe fuels, car care, and in‑store services.</p>
+            <p><a class="btn secondary" href="#">Learn more</a></p>
+          </div>
+        </article>
+        <article class="card" id="loyalty">
+          <img src="https://a.storyblok.com/f/85281/1280x720/a026d94744/shell-recharge-solutions-video-poster.jpg" alt="Shell Recharge brand visual (placeholder card)" loading="lazy" />
+          <div class="body">
+            <h3>Shell Go+ Loyalty</h3>
+            <p>Placeholder copy for the loyalty programme benefits.</p>
+            <p><a class="btn secondary" href="#" data-cta-name="GoPlus">Join now</a></p>
+          </div>
+        </article>
+        <article class="card" id="stations">
+          <img src="https://a.storyblok.com/f/85281/1900x1200/6c083a5a68/about-shell-recharge.jpeg" alt="Shell Recharge hero image (placeholder card)" loading="lazy" />
+          <div class="body">
+            <h3>Find a Station</h3>
+            <p>Search tool to find nearby Shell stations.</p>
+            <p><a class="btn secondary" href="#">Open locator</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="news" aria-labelledby="news-heading">
+      <div class="section-head"><h2 id="news-heading">Latest news</h2><a href="#" class="btn secondary">View all</a></div>
+      <div class="grid-3">
+        <article class="card">
+          <img src="https://a.storyblok.com/f/85281/1024x768/7bc4c61ada/shell-recharge_public-charging_-man-charges-at-ultra-rapid-350kw-public-charge-point-min.jpg" alt="News image placeholder" loading="lazy" />
+          <div class="body"><h3>Headline one</h3><p>Short summary for a news item or press release.</p><p><a href="#">Read more</a></p></div>
+        </article>
+        <article class="card">
+          <img src="https://a.storyblok.com/f/85281/1280x720/a026d94744/shell-recharge-solutions-video-poster.jpg" alt="News image placeholder 2" loading="lazy" />
+          <div class="body"><h3>Headline two</h3><p>Short summary for a news item or press release.</p><p><a href="#">Read more</a></p></div>
+        </article>
+        <article class="card">
+          <img src="https://a.storyblok.com/f/85281/1900x1200/6c083a5a68/about-shell-recharge.jpeg" alt="News image placeholder 3" loading="lazy" />
+          <div class="body"><h3>Headline three</h3><p>Short summary for a news item or press release.</p><p><a href="#">Read more</a></p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="sustainability" aria-labelledby="sust-heading">
+      <h2 id="sust-heading">Sustainability highlight</h2>
+      <div class="newsletter" role="region" aria-label="Highlight">
+        <p>Use this space for sustainability initiatives or community stories.</p>
+        <a class="btn primary" href="#">Discover initiatives</a>
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="nl-head">
+      <h2 id="nl-head">Stay in the loop</h2>
+      <div class="newsletter">
+        <form action="#" method="post" aria-label="Newsletter signup">
+          <label class="visually-hidden" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <button type="submit" data-cta-name="NewsletterSignup">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="container">
+    <div class="foot">
+      <section><h4>About</h4><p>Short placeholder about Shell UK.</p></section>
+      <section><h4>Products</h4><ul><li><a href="#">Fuels</a></li><li><a href="#">Lubricants</a></li><li><a href="#">Recharge (EV)</a></li></ul></section>
+      <section><h4>Support</h4><ul><li><a href="#" id="cookie-prefs">Cookie preferences</a></li><li><a href="#">Help centre</a></li><li><a href="#">Contact</a></li></ul></section>
+      <section><h4>Legal</h4><ul><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Accessibility</a></li></ul></section>
+    </div>
+    <div class="legal">© <span id="year"></span> Shell UK (template). All rights reserved.</div>
+  </footer>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event: "page_view", page: { template: "shell-home", language: document.documentElement.lang, url: location.href }});
+    document.addEventListener("click", (e) => {
+      const a = e.target.closest("[data-cta-name]");
+      if(!a) return;
+      window.dataLayer.push({event: "cta_click", cta: { name: a.dataset.ctaName, text: a.textContent?.trim(), href: a.getAttribute("href") }});
+    });
+    const btn = document.querySelector(".menu-btn");
+    const menu = document.querySelector("#primary-menu");
+    btn?.addEventListener("click", () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", (!expanded).toString());
+      menu.setAttribute("aria-expanded", (!expanded).toString());
+    });
+    document.getElementById("cookie-prefs")?.addEventListener("click", (e) => {
+      e.preventDefault(); if (window.OneTrust?.ToggleInfoDisplay) { window.OneTrust.ToggleInfoDisplay(); }
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
