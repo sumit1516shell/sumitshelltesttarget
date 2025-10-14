@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shell Recharge | EV Charging (Template)</title>
+  <meta name="description" content="Template for Shell Recharge with banner, pricing, app promo, locations map placeholder, and FAQs." />
+  <meta name="theme-color" content="#00A86B" />
+  <link rel="icon" href="/assets/favicon-recharge.png" />
+  <style>
+    :root{ --brand-green:#00A86B; --brand-dark:#0F1A14; --brand-light:#F2FBF7; --brand-grey-200:#e8eceb;
+           --text:#0F1A14; --bg:#ffffff; --radius:12px; --shadow:0 6px 18px rgba(0,0,0,.08);
+           --maxw:1200px; --space: clamp(12px, 2vw, 20px); --space-lg: clamp(18px, 3vw, 32px); }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+    a{color:#0b69ff;text-decoration:none} a:hover{opacity:.9}
+    .container{max-width:var(--maxw);margin-inline:auto;padding:0 var(--space)}
+    header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--brand-grey-200);z-index:50}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800}
+    .badge{width:38px;height:38px;border-radius:10px;background:var(--brand-green);display:grid;place-items:center;color:#fff;font-weight:900}
+    .menu-btn{display:none}
+    nav ul{list-style:none;display:flex;gap:14px;margin:0;padding:0}
+    nav a{color:var(--text);font-weight:600}
+    @media (max-width:900px){nav{display:none}.menu-btn{display:inline-flex}.menu[aria-expanded="true"]{display:block}.menu ul{flex-direction:column;padding:var(--space)}}
+
+    .hero{background:var(--brand-light)}
+    .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--space-lg);padding:var(--space-lg) 0}
+    .hero h1{font-size:clamp(1.7rem,2.8vw,2.6rem);margin:.2em 0}
+    .lead{color:#294139;max-width:65ch}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:none;border-radius:999px;padding:12px 16px;font-weight:800;cursor:pointer}
+    .btn.primary{background:var(--brand-green);color:#fff}
+    .btn.secondary{background:#fff;border:2px solid var(--brand-green);color:var(--brand-green)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .hero img{width:100%;height:100%;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+    @media (max-width:900px){.hero-inner{grid-template-columns:1fr}}
+
+    .finder{display:grid;grid-template-columns:1fr 1.2fr;gap:var(--space-lg);margin:var(--space-lg) 0}
+    .finder form{display:flex;gap:8px;flex-wrap:wrap}
+    .finder input[type="search"]{flex:1;min-width:220px;padding:12px;border-radius:999px;border:1px solid var(--brand-grey-200)}
+    .map{height:380px;border-radius:var(--radius);border:1px solid var(--brand-grey-200);background:#f6faf8;display:grid;place-items:center;color:#6a7b73}
+    @media (max-width:900px){.finder{grid-template-columns:1fr}}
+
+    .pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space);margin:var(--space-lg) 0}
+    .price-card{border:1px solid var(--brand-grey-200);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);background:#fff}
+    .price-card h3{margin:.2em 0}
+    .price{font-size:1.8rem;font-weight:900}
+    @media (max-width:900px){.pricing{grid-template-columns:1fr}}
+
+    .app{background:var(--brand-light);border-radius:var(--radius);padding:var(--space-lg);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-lg)}
+    .store-btns{display:flex;gap:10px;flex-wrap:wrap}
+    .store-btns a{display:inline-flex;align-items:center;gap:8px;border-radius:10px;border:1px solid var(--brand-grey-200);padding:10px 14px;background:#fff;color:var(--text);font-weight:700}
+    @media (max-width:900px){.app{grid-template-columns:1fr}}
+
+    details{border:1px solid var(--brand-grey-200);border-radius:10px;padding:12px;background:#fff}
+    details+details{margin-top:10px}
+    summary{cursor:pointer;font-weight:800}
+
+    footer{border-top:1px solid var(--brand-grey-200);margin-top:var(--space-lg)}
+    .legal{font-size:.9rem;color:#5d6a65;padding:var(--space) 0}
+  </style>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <header>
+    <div class="container topbar">
+      <a class="brand" href="/" aria-label="Shell Recharge home"><span class="badge" aria-hidden="true">R</span><span>Shell Recharge</span></a>
+      <button class="menu-btn btn secondary" aria-controls="menu" aria-expanded="false">☰ Menu</button>
+      <nav id="menu" class="menu" aria-label="Primary">
+        <ul>
+          <li><a href="#finder">Find a charger</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#app">App</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#support">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-label="EV banner">
+      <div class="container hero-inner">
+        <div>
+          <p class="eyebrow" style="color:var(--brand-green);font-weight:900;letter-spacing:.08em;text-transform:uppercase">Featured</p>
+          <h1>Charge with confidence</h1>
+          <p class="lead">Hero/banner images are now sourced from Shell’s public asset CDN for demo. Replace with approved campaign assets before launch.</p>
+          <div class="actions">
+            <a class="btn primary" href="#finder" data-cta-name="FindCharger">Find a charger</a>
+            <a class="btn secondary" href="#app" data-cta-name="GetApp">Get the app</a>
+          </div>
+        </div>
+        <div>
+          <!-- Updated responsive hero images (Shell-owned URLs) -->
+          <picture>
+            <source media="(min-width:1024px)" srcset="https://a.storyblok.com/f/85281/1900x1200/6c083a5a68/about-shell-recharge.jpeg" />
+            <source media="(min-width:600px)" srcset="https://a.storyblok.com/f/85281/1280x720/a026d94744/shell-recharge-solutions-video-poster.jpg" />
+            <img src="https://a.storyblok.com/f/85281/1024x768/7bc4c61ada/shell-recharge_public-charging_-man-charges-at-ultra-rapid-350kw-public-charge-point-min.jpg" alt="Driver charging at a Shell Recharge ultra-rapid charge point (hero image)" width="1900" height="1200" loading="eager" fetchpriority="high" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="container finder" id="finder" aria-labelledby="finder-head">
+      <div>
+        <h2 id="finder-head">Find a charge point</h2>
+        <p>Search by location or postcode. Integrate with your geocoder & map.</p>
+        <form action="#" role="search" aria-label="Charger search">
+          <label class="visually-hidden" for="q">Town, city or postcode</label>
+          <input id="q" name="q" type="search" placeholder="e.g. SW1A 1AA" />
+          <button class="btn primary" type="submit" data-cta-name="SearchCharger">Search</button>
+          <button class="btn secondary" type="button" id="use-location" data-cta-name="UseMyLocation">Use my location</button>
+        </form>
+        <ul>
+          <li>Fast, rapid & ultra-rapid placeholders</li>
+          <li>Open hours & connector types placeholders</li>
+        </ul>
+      </div>
+      <div>
+        <div id="map" class="map" role="img" aria-label="Map placeholder"><span>Map placeholder (integrate Leaflet / Mapbox)</span></div>
+      </div>
+    </section>
+
+    <section class="container" id="pricing" aria-labelledby="pricing-head">
+      <h2 id="pricing-head">Pricing (placeholder)</h2>
+      <div class="pricing">
+        <article class="price-card"><h3>AC (up to 22kW)</h3><p class="price">£—.—/kWh</p><p>Set your current tariffs here.</p></article>
+        <article class="price-card"><h3>DC Rapid (50kW)</h3><p class="price">£—.—/kWh</p><p>Set your current tariffs here.</p></article>
+        <article class="price-card"><h3>DC Ultra Rapid (100kW+)</h3><p class="price">£—.—/kWh</p><p>Set your current tariffs here.</p></article>
+      </div>
+      <p><em>Tip:</em> Consider a table for roaming/partner networks if applicable.</p>
+    </section>
+
+    <section class="container app" id="app" aria-labelledby="app-head">
+      <div>
+        <h2 id="app-head">Manage charging in the app</h2>
+        <p>Start/stop sessions, see pricing, and view your history. Replace with real copy, screenshots, and deep links.</p>
+        <div class="store-btns">
+          <a href="#" aria-label="Download on the App Store" data-cta-name="AppStore"> App Store</a>
+          <a href="#" aria-label="Get it on Google Play" data-cta-name="GooglePlay">▶ Google Play</a>
+        </div>
+      </div>
+      <div>
+        <!-- Official Shell Recharge app mockup (Shell-owned) -->
+        <img src="https://a.storyblok.com/f/85281/2480x2048/a1d96086db/shell-recharge-app-mockup_charging-and-add-your-vehicle.png" alt="Shell Recharge app mockup showing charging session and add-vehicle screens" width="1240" height="1024" style="width:100%;height:auto;border-radius:12px;border:1px solid var(--brand-grey-200);box-shadow:var(--shadow)" />
+      </div>
+    </section>
+
+    <section class="container" aria-labelledby="how-head">
+      <h2 id="how-head">How charging works</h2>
+      <ol>
+        <li>Find a charger in the app or on the map.</li>
+        <li>Plug in and start the session via app or card (placeholder).</li>
+        <li>Track kWh and session cost, then stop and unplug.</li>
+      </ol>
+    </section>
+
+    <section class="container" id="faq" aria-labelledby="faq-head">
+      <h2 id="faq-head">FAQs</h2>
+      <details><summary>What cables/connectors are supported?</summary><div>Placeholder answer. Replace with supported connector details.</div></details>
+      <details><summary>How do I start a charge?</summary><div>Placeholder answer. Replace with app/RFID steps.</div></details>
+      <details><summary>Is there an idle fee?</summary><div>Placeholder answer. Replace with policy.</div></details>
+    </section>
+
+    <section class="container" id="support" aria-labelledby="support-head">
+      <h2 id="support-head">Support</h2>
+      <p>Need help? Contact support via chat, phone, or email (placeholders).</p>
+      <p><a class="btn secondary" href="#" data-cta-name="ContactSupport">Contact support</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container legal">© <span id="year"></span> Shell Recharge (template). All rights reserved. <a href="#" id="cookie-prefs">Cookie preferences</a></div>
+  </footer>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event: "page_view", page: { template: "shell-recharge", language: document.documentElement.lang, url: location.href }});
+    document.addEventListener("click", (e) => {
+      const el = e.target.closest("[data-cta-name]");
+      if(!el) return; window.dataLayer.push({event:"cta_click", cta:{ name: el.dataset.ctaName, text: el.textContent?.trim(), href: el.getAttribute("href") }});
+    });
+    const btn = document.querySelector(".menu-btn"); const menu = document.querySelector("#menu");
+    btn?.addEventListener("click", () => { const expanded = btn.getAttribute("aria-expanded") === "true"; btn.setAttribute("aria-expanded", (!expanded).toString()); menu.setAttribute("aria-expanded", (!expanded).toString()); });
+    document.getElementById("use-location")?.addEventListener("click", async () => {
+      if(!navigator.geolocation){ alert("Geolocation not supported."); return; }
+      navigator.geolocation.getCurrentPosition((pos) => {
+        const {latitude, longitude} = pos.coords;
+        window.dataLayer.push({ event:"geo_granted", geo:{latitude, longitude} });
+        alert(`Your coordinates: ${latitude.toFixed(5)}, ${longitude.toFixed(5)} (map integration TODO)`);
+      }, () => { window.dataLayer.push({ event:"geo_denied" }); alert("Permission denied."); });
+    });
+    document.getElementById("cookie-prefs")?.addEventListener("click", (e) => { e.preventDefault(); if (window.OneTrust?.ToggleInfoDisplay) { window.OneTrust.ToggleInfoDisplay(); }});
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
