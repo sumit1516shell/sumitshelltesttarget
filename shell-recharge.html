@@ -87,7 +87,10 @@
   <a class="visually-hidden" href="#main">Skip to content</a>
   <header>
     <div class="container topbar">
-      <a class="brand" href="/" aria-label="Shell Recharge home"><span class="badge" aria-hidden="true">R</span><span>Shell Recharge</span></a>
+      <a href="/" id="logoCellLink" title="Shell GO+ logo">
+				<img alt="Shell GO+ logo" class="light-mode-menu-logo" id="logo_cell_image" src="https://www.goplus.shell.com/cdn/b/deriv/17/b1088a032c27fa47681c1dafe8982a/292x54.png?Header Icon.png" style="max-height: 35px; max-width: 100%;">
+				<img alt="Shell GO+ logo" class="light-mode-menu-logo darkImage" id="logo_cell_image_dark_mode" src="https://www.goplus.shell.com/cdn/b/deriv/d0/2712aed3b03f5a9fa982c8a27e0b36/124x53.png?spider.common.logo.on.menu.image.dark.mode.png" style="max-height: 35px; max-width: 100%;">
+			</a>
       <button class="menu-btn btn secondary" aria-controls="menu" aria-expanded="false">☰ Menu</button>
       <nav id="menu" class="menu" aria-label="Primary">
         <ul>
@@ -123,7 +126,7 @@
       </div>
     </section>
 
-    <section class="container finder" id="finder" aria-labelledby="finder-head">
+    <section class="container" id="finder" aria-labelledby="finder-head">
       <div>
         <h2 id="finder-head">Find a charge point</h2>
         <p>Search by location or postcode. Integrate with your geocoder & map.</p>
