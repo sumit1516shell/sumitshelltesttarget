@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
- 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Shell Recharge | EV Charging (Template)</title>
@@ -10,7 +9,7 @@
   <link rel="icon" href="/assets/favicon-recharge.png" />
   <style>
     :root{ --brand-green:#00A86B; --brand-dark:#0F1A14; --brand-light:#F2FBF7; --brand-grey-200:#e8eceb;
-           --text:#0F1A14; --bg:#ffffff; --radius:12px; --shadow:0 6px 18px rgba(0,0,0,.08);data
+           --text:#0F1A14; --bg:#ffffff; --radius:12px; --shadow:0 6px 18px rgba(0,0,0,.08);
            --maxw:1200px; --space: clamp(12px, 2vw, 20px); --space-lg: clamp(18px, 3vw, 32px); }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
@@ -63,11 +62,8 @@
   </style>
 </head>
 <body>
-
-
-<!-- Block 2: Adobe Launch (Dev library example) -->
-<script>https://assets.adobedtm.com/fdd3d8394b31/c31dcce1ff15/launch-ca95bcef456d-development.min.js</script>
-
+ <script src="https://assets.adobedtm.com/fdd3d8394b31/c31dcce1ff15/launch-ca95bcef456d-development.min.js" async></script>
+ 
 <!-- Block 3: Your Page Loaded event (after Launch tag) -->
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -87,6 +83,7 @@
     }
   });
 </script>
+
   <a class="visually-hidden" href="#main">Skip to content</a>
   <header>
     <div class="container topbar">
@@ -126,7 +123,7 @@
       </div>
     </section>
 
-    <section class="container" id="finder" aria-labelledby="finder-head">
+    <section class="container finder" id="finder" aria-labelledby="finder-head">
       <div>
         <h2 id="finder-head">Find a charge point</h2>
         <p>Search by location or postcode. Integrate with your geocoder & map.</p>
@@ -198,6 +195,6 @@
     <div class="container legal">© <span id="year"></span> Shell Recharge (template). All rights reserved. <a href="#" id="cookie-prefs">Cookie preferences</a></div>
   </footer>
 
-  
+ 
 </body>
 </html>
