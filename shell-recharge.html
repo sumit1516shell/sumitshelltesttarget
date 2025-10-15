@@ -10,7 +10,7 @@
   <link rel="icon" href="/assets/favicon-recharge.png" />
   <style>
     :root{ --brand-green:#00A86B; --brand-dark:#0F1A14; --brand-light:#F2FBF7; --brand-grey-200:#e8eceb;
-           --text:#0F1A14; --bg:#ffffff; --radius:12px; --shadow:0 6px 18px rgba(0,0,0,.08);
+           --text:#0F1A14; --bg:#ffffff; --radius:12px; --shadow:0 6px 18px rgba(0,0,0,.08);data
            --maxw:1200px; --space: clamp(12px, 2vw, 20px); --space-lg: clamp(18px, 3vw, 32px); }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
@@ -63,23 +63,10 @@
   </style>
 </head>
 <body>
- <!-- Block 1: dataLayer init -->
-<script>
-  window.dataLayer = window.dataLayer || [];
 
-  // Optional: initial page_view
-  window.dataLayer.push({
-    event: "page_view",
-    page: {
-      template: "shell-recharge",
-      language: document.documentElement.lang || "en",
-      url: location.href
-    }
-  });
-</script>
 
 <!-- Block 2: Adobe Launch (Dev library example) -->
-https://assets.adobedtm.com/fdd3d8394b31/c31dcce1ff15/launch-ca95bcef456d-development.min.js</script>
+<script>https://assets.adobedtm.com/fdd3d8394b31/c31dcce1ff15/launch-ca95bcef456d-development.min.js</script>
 
 <!-- Block 3: Your Page Loaded event (after Launch tag) -->
 <script>
